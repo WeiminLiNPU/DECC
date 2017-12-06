@@ -1,0 +1,38 @@
+function [I_supp_fin] = Supp_Rib(I)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+
+%% Extraction and suppression
+% 1. get the high frequency signal for "vessel" + "artery"
+m = 1; n = 56;
+h = ones(m,n)/(m*n);
+I_LF1 = imfilter(I, h, 'replicate');
+I_HF1 = I - I_LF1;
+
+% 2. get the overall profile of "heart"
+m = 60; n = 60; h = ones(m,n)/(m*n);
+I_LF2 = imfilter(I, h, 'replicate');
+m = 55; n = 2; h = ones(m,n)/(m*n);
+I_LF2 = imfilter(I_LF2, h, 'replicate');
+
+I_supp = I_HF1 + I_LF2;
+
+%% Correct the global boundary intensity difference using v4 interpolation
+I_diff = I - I_supp;
+l_row=size(I_diff,1); l_col=size(I_diff,2);
+x=[1:l_col, 1:l_col];
+y=[repmat([1],1,l_col), repmat([l_row],1,l_col)];
+
+z = [];
+for i = 1:length(x)
+    z = [z,I_diff(y(i),x(i))];
+end
+
+[Y,X] = meshgrid(1:l_col,1:l_row);
+Z=griddata(y,x,z,X,Y,'linear');
+
+I_supp_fin = I_supp + Z;
+
+
+end
+
