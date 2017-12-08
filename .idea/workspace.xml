@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63655639-6b40-4e4d-a297-23270617b143" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cancelation.py" afterPath="$PROJECT_DIR$/cancelation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rib_supp.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/H.dcm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/L.dcm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mid_lines.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test_menpo.py" afterPath="$PROJECT_DIR$/rib_fitting.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mid_lines.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mid_lines.py">
+      <file leaf-file-name="rib_supp.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rib_supp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+            <state relative-caret-position="439">
+              <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -30,11 +34,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cancelation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rib_fitting.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rib_fitting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="88" column="64" lean-forward="true" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
+              <folding>
+                <element signature="e#20#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cancelation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cancelation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="-254">
+              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -50,8 +66,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mid_lines.py" />
         <option value="$PROJECT_DIR$/cancelation.py" />
+        <option value="$PROJECT_DIR$/mid_lines.py" />
+        <option value="$PROJECT_DIR$/rib_supp.py" />
+        <option value="$PROJECT_DIR$/rib_fitting.py" />
       </list>
     </option>
   </component>
@@ -98,7 +116,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.mid_lines">
+  <component name="RunManager" selected="Python.rib_fitting">
     <configuration default="false" name="mid_lines" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,7 +129,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DECC" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mid_lines.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rib_supp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rib_fitting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DECC" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rib_fitting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -250,12 +285,14 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.mid_lines" />
+      <item index="1" class="java.lang.String" itemvalue="Python.rib_fitting" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.mid_lines" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.rib_fitting" />
+        <item index="1" class="java.lang.String" itemvalue="Python.mid_lines" />
       </list>
     </recent_temporary>
   </component>
@@ -303,22 +340,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mid_lines.py">
+    <entry file="file://$PROJECT_DIR$/rib_fitting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+        <state relative-caret-position="397">
+          <caret line="88" column="64" lean-forward="true" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#20#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cancelation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="-254">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rib_supp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
