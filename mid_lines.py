@@ -3,6 +3,7 @@ import pickle
 from scipy.interpolate import interp1d
 import numpy as np
 from scipy import misc
+import dicom
 import os
 import cancelation as cc
 img=misc.imread('test/10.jpg')
