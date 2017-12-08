@@ -18,7 +18,7 @@ def rib_suppress(img,pts):
     mid_points = np.zeros((14, 7, 2))
     mid_point = np.zeros((7, 2))
     for i in range(14):
-        base = i * 14;
+        base = i * 14
         index=[0,2,3,4,5,6,1]
         for j in range(7):
             mid_point[j, 0] = (pts[base + index[j], 0] + pts[base + index[j] + 7, 0]) / 2
@@ -48,7 +48,7 @@ def rib_suppress(img,pts):
         #misc.imsave(os.path.join('./result/',str(i)+'.png'),r_img)
         return img
 
-if __name__=="__main__":
+if __name__ == "__main__":
     img = dicom.read_file('test/IL10.dcm').pixel_array
 
     with open('fited-point.pkl', 'r') as f:
