@@ -12,7 +12,7 @@ def cancelation(img):
     kernel = np.ones((1,60),np.float32)/60.0
     LF = cv2.filter2D(img,-1,kernel)
     HF = img-LF
-    print img.shape
+
     #compute regional low frequency
     kernel = np.ones((60,60),np.float32)/3600
     region_imap= cv2.filter2D(img, -1, kernel)
@@ -22,8 +22,8 @@ def cancelation(img):
     # fit the result back to the original image smoothly
     diff=img-res
     [h,w]=img.shape
-    p1=np.vstack((np.arange(1,w+1), np.zeros(w)))
-    p2=np.vstack((np.arange(1,w+1), (h-1)*np.ones(w)))
+    p1=np.vstack((np.arange(0,w), np.zeros(w)))
+    p2=np.vstack((np.arange(0,w), (h-1)*np.ones(w)))
     p=np.concatenate((p1.transpose(), p2.transpose()), axis=0)
     # value=np.concatenate((diff[0][1:w],diff[h-1][1:w]),axis=0)
     x, y=np.mgrid[0:w,0:h]
